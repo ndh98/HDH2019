@@ -108,6 +108,7 @@ int main(void) {
 		if (strcmp(buffer, "!!") == 0) {
 			if (history_count > 0) {
 				memcpy(buffer, history[history_count % 10], MAX_LINE + 1);
+				//printf("%s\n", history[history_count % 10]);
 				length = strlen(buffer);
 			} else {
 				invoke_error("No commands in history");
